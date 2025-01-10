@@ -10,9 +10,9 @@ const app = express();
 
 // Middleware setup
 app.use(cors({
-  origin: [process.env.FRONTEND_URL],
-  methods: ['POST'],
-  credentials: true,
+  origin: process.env.FRONTEND_URL, // Allow frontend URL from environment
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
+  credentials: true, // If you're using cookies or authentication
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
