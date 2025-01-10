@@ -10,7 +10,7 @@ const app = express();
 
 // Middleware setup
 app.use(cors({
-  origin: process.env.FRONTEND_URL, // Allow frontend URL from environment
+  origin:'https://sunny-beignet-91d7d6.netlify.app', // Replace with your Netlify frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
   credentials: true, // If you're using cookies or authentication
 }));
